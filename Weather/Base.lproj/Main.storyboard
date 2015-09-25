@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pES-HQ-mt6">
+                                <rect key="frame" x="26" y="276" width="43" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="gwU-95-3z7"/>
+                                    <constraint firstAttribute="width" constant="43" id="ueA-gb-80H"/>
+                                </constraints>
+                                <state key="normal" title="Sunny">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendSunny:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="5L9-wH-FXL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FOd-po-mbO">
+                                <rect key="frame" x="251" y="276" width="43" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="43" id="Q3p-dq-YrN"/>
+                                    <constraint firstAttribute="height" constant="30" id="rXv-0r-QVd"/>
+                                </constraints>
+                                <state key="normal" title="Foggy">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendFoggy:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Jf2-Hg-yq3"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s6G-8O-kf4">
+                                <rect key="frame" x="16" y="210" width="288" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="af2-kc-OGg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="s6G-8O-kf4" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="9t8-c7-ZGQ"/>
+                            <constraint firstItem="pES-HQ-mt6" firstAttribute="top" secondItem="s6G-8O-kf4" secondAttribute="bottom" constant="45" id="Fm6-a8-N9T"/>
+                            <constraint firstItem="FOd-po-mbO" firstAttribute="top" secondItem="s6G-8O-kf4" secondAttribute="bottom" constant="45" id="Hew-jd-Z5W"/>
+                            <constraint firstItem="FOd-po-mbO" firstAttribute="top" secondItem="s6G-8O-kf4" secondAttribute="bottom" constant="45" id="Tzt-8v-Jmu"/>
+                            <constraint firstItem="pES-HQ-mt6" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="10" id="UHe-5J-mlA"/>
+                            <constraint firstItem="s6G-8O-kf4" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="X6E-A4-AM4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="FOd-po-mbO" secondAttribute="trailing" constant="10" id="XeW-9O-dNJ"/>
+                            <constraint firstItem="s6G-8O-kf4" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="190" id="e6d-Q9-c32"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="buttonFoggy" destination="FOd-po-mbO" id="f5O-pB-cda"/>
+                        <outlet property="buttonSunny" destination="pES-HQ-mt6" id="yZn-K7-TZw"/>
+                        <outlet property="labelCondition" destination="s6G-8O-kf4" id="PSl-xO-iej"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="602" y="397"/>
+        </scene>
+    </scenes>
+</document>
