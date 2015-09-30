@@ -1,6 +1,14 @@
 # demo-ios-weather
 一个社会，地方，移动，众包的天气应用程序，也对如何开始使用Wilddog和iOS的快速启动。
 
+### 本地运行
+
+首先确认本机已经安装Xcode 运行环境，然后执行,模拟器或者真机：
+```
+git clone git@github.com:WildDogTeam/demo-ios-wildchat.git
+cd  demo-ios-wildchat
+```
+
 ## 支持
 如果在使用过程中有任何问题，请提 [issue](https://github.com/WildDogTeam/demo-ios-weather/issues) ，我会在 Github 上给予帮助。
 
