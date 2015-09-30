@@ -5,8 +5,8 @@
 
 首先确认本机已经安装Xcode 运行环境，然后执行,模拟器或者真机：
 ```
-git clone git@github.com:WildDogTeam/demo-ios-wildchat.git
-cd  demo-ios-wildchat
+git clone git@github.com:WildDogTeam/demo-ios-weather.git
+cd  demo-ios-weather
 ```
 
 ## 支持
