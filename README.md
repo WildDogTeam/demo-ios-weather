@@ -1,5 +1,5 @@
 # demo-ios-weather
-一个社会，地方，移动，众包的天气应用程序，也对如何开始使用Wilddog和iOS的快速启动。
+demo-ios-weather 是一个基于 Wilddog iOS SDK 开发的修改天气状态 demo，主要实现 Wilddog 数据多设备同步修改和加载。
 
 ### 本地运行
 
