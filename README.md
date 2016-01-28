@@ -19,10 +19,9 @@ cd  demo-ios-weather
 
 * [Wilddog 概览](https://z.wilddog.com/overview/introduction)
 * [IOS SDK快速入门](https://z.wilddog.com/ios/quickstart)
-* [IOS SDK 开发向导](https://z.wilddog.com/ios/quickstart)
 * [IOS SDK API](https://z.wilddog.com/ios/api)
 * [下载页面](https://www.wilddog.com/download/)
-* [Wilddog FAQ](https://z.wilddog.com/faq/qa)
+* [Wilddog FAQ](https://z.wilddog.com/questions)
 
 
 ### License
