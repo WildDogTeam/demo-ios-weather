@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import <Wilddog/Wilddog.h>
+#import "Wilddog.h"
 @interface ViewController ()
 
 @property (strong, nonatomic) IBOutlet UILabel *labelCondition;

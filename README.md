@@ -7,6 +7,7 @@ demo-ios-weather 是一个基于 Wilddog iOS SDK 开发的修改天气状态 dem
 ```
 git clone git@github.com:WildDogTeam/demo-ios-weather.git
 cd  demo-ios-weather
+pod install
 ```
 ### 更多示例
 
