@@ -9,7 +9,9 @@
 #import "ViewController.h"
 #import "Wilddog.h"
 @interface ViewController ()
-
+{
+    WDGSyncReference *ref;
+}
 @property (strong, nonatomic) IBOutlet UILabel *labelCondition;
 @property (strong, nonatomic) IBOutlet UIButton *buttonSunny;
 @property (strong, nonatomic) IBOutlet UIButton *buttonFoggy;
@@ -22,29 +24,28 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    Wilddog *wd = [[Wilddog alloc] initWithUrl: @"https://hongye.wilddogio.com/condition"];
     
+    //初始化 WDGApp
+    WDGOptions *option = [[WDGOptions alloc] initWithSyncURL:@"https://wild-weather.wilddogio.com/"];
+    [WDGApp configureWithOptions:option];
+    //获取一个指向根节点的 WDGSyncReference 实例
+    WDGSyncReference *myRootRef = [[WDGSync sync] reference];
     
-    [wd observeEventType:WEventTypeValue withBlock:^(WDataSnapshot *snapshot) {
-        
+    ref = [myRootRef child:@"condition"];
+    [ref observeEventType:WDGDataEventTypeValue withBlock:^(WDGDataSnapshot *snapshot) {
         if ([snapshot.value isKindOfClass:[NSString class]]) {
             self.labelCondition.text = snapshot.value;
         }else {
             self.labelCondition.text = @"";
         }
-        
-        
     }];
 }
 - (IBAction)sendSunny:(UIButton *)sender {
-    Wilddog *wd = [[Wilddog alloc] initWithUrl:@"https://hongye.wilddogio.com/condition"];
-    [wd setValue:@"Sunny"];
+    [ref setValue:@"Sunny"];
 }
 - (IBAction)sendFoggy:(UIButton *)sender {
-    Wilddog *wd = [[Wilddog alloc] initWithUrl:@"https://hongye.wilddogio.com/condition"];
-    [wd setValue:@"Foggy"];
+    [ref setValue:@"Foggy"];
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
